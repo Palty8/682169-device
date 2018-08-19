@@ -10,26 +10,31 @@
       <a href="index.html"> <img src="../img/logo.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»"></a>
       <ul class="user-navigation">
         <li class="search-form">
-           <form>
-             <input type="search" id="search">
-            <label for="search">Найти</label>
+          <form method="GET" action="/echo">
+            <input type="search" id="search">
+            <label class="visually-hidden" for="search"></label>
+            <button type="submit">Найти</button>
           </form>
         </li>
-        <li class="login-link"><a href="#">Валентин Петухов</a></li>
-        <li class="logout-link"><a href="#">Выйти</a></li>
-        <li class="comparison-goods"><a href="#">Сравнить</a></li>
-        <li class="cart"><a href="#">Корзина</a></li>
+        <li class="login-link">
+          <a href="#">Валентин Петухов</a></li>
+        <li class="logout-link">
+          <a href="#">Выйти</a></li>
+        <li class="comparison-goods">
+          <a href="#">Сравнить</a></li>
+        <li class="cart">
+          <a href="#">Корзина</a></li>
       </ul>
       <nav class="main-navigation">
       <ul class="site-navigation">
         <li><a href="catalog.html">Каталог товаров</a>
           <ul class="catalog">
-            <li>Виртуальная реальность</li>
-            <li>Фитнес-браслеты</li>
-            <li>Квадракоптеры</li>
-            <li>Моноподы для селфи</li>
-            <li>Умные часы</li>
-            <li>Экшн-камеры</li>
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Квадракоптеры</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
           </ul>
         </li>
         <li><a href="delivery.html">Доставка</a></li>
@@ -51,11 +56,58 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <h3>Фильтр:</h3>
-        <!---Форма-->
+        <form method="GET" action="/echo" class="filter-form">
+          <fieldset>
+            <legend>Стоимость</legend>
+          <!--рендж-->
+          </fieldset>
+
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li class="color-option">
+                <input type="checkbox" name="black" id="black-color" checked>
+                <label for="black-color">Черный</label>
+              </li>
+              <li class="color-option">
+                <input type="checkbox" name="white" id="white-color">
+                <label for="white-color">Белый</label>
+              </li>
+              <li class="color-option">
+                <input type="checkbox" name="blue" id="blue-color" checked>
+                <label for="blue-color">Синий</label>
+              </li>
+              <li class="color-option">
+                <input type="checkbox" name="red" id="red-color" checked>
+                <label for="red-color">Красный</label>
+              </li>
+              <li class="color-option">
+                <input type="checkbox" name="pink" id="pink-color">
+                <label for="pink-color">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="blutooth-option">
+                <input type="radio" id="bluetooth-yes" name="toggle-bluetooth-option" checked>
+                <label for="bluetooth-yes">Есть</label>
+              </li>
+              <li class="blutooth-option">
+                <input type="radio" id="bluetooth-no" name="toggle-bluetooth-option">
+                <label for="bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка товаров</h2>
+
         <h3>Сортировка:</h3>
         <ul class="sorting-list">
           <li class="sorting-item sorting-item current"><a href="#">По цене</a></li>
@@ -104,9 +156,9 @@
               <p class="selfie-sticks-image">
                 <img src="../img/item-4.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               </p>
-               <p class="selfie-sticks-price">4900 руб.</p>
-               <a href="#" class="button">В корзину</a>
-               <a href="#">Добавить к сравнению</a>
+              <p class="selfie-sticks-price">4900 руб.</p>
+              <a href="#" class="button">В корзину</a>
+              <a href="#">Добавить к сравнению</a>
           </li>
         </ul>
       </section>
@@ -116,17 +168,21 @@
         <li class="pagination-item pagination-item-current">1</li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
-        <li class="pagination-item"><a href="#">Назад</a></li>
+        <li class="pagination-item"><a href="#">Вперед</a></li>
       </ul>
     </main>
 
     <footer class="main-footer">
-      <a href="#"><img src="device-logo.svg" width="1" height="1" alt="Логотип интернет-магазина «Device»"></a>
+      <a href="#"><img src="device-logo.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»"></a>
       <ul class="footer-user-navigation">
-        <li class="login-link"><a href="#">Валентин Петухов</a></li>
-        <li class="logout-link"><a href="#">Выйти</a></li>
-        <li class="comparison-goods"><a href="#">Сравнить</a></li>
-        <li class="cart"><a href="#">Корзина</a></li>
+        <li class="login-link">
+          <a href="#">Валентин Петухов</a></li>
+        <li class="logout-link">
+          <a href="#">Выйти</a></li>
+        <li class="comparison-goods">
+          <a href="#">Сравнить</a></li>
+        <li class="cart">
+          <a href="#">Корзина</a></li>
       </ul>
       <p class="footer-address">г. Москва, ул. Строителей, 15</p>
       <ul class="footer-services">
@@ -136,9 +192,9 @@
       </ul>
       <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
       <ul class="footer-social">
-        <li><a href="#">FB</a></li>
-        <li><a href="#">Istagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Facebook"></a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Instagram"></a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Twitter"></a></li>
       </ul>
     </footer>
     

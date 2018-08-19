@@ -11,14 +11,18 @@
       <img src="../img/logo.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»">
         <ul class="user-navigation">
           <li class="search-form">
-            <form>
+            <form method="GET" action="/echo">
               <input type="search" id="search">
-               <label for="search">Найти</label>
+              <label class="visually-hidden" for="search"></label>
+              <button type="submit">Найти</button>
             </form>
           </li>
-          <li class="login-link"><a href="#">Войти</a></li>
-          <li class="comparison-goods"><a href="#">Сравнить</a></li>
-          <li class="cart"><a href="#">Корзина</a></li>
+          <li class="login-link">
+            <a href="#">Войти</a></li>
+          <li class="comparison-goods">
+            <a href="#">Сравнить</a></li>
+          <li class="cart">
+            <a href="#">Корзина</a></li>
         </ul>
         <nav class="main-navigation">
         <ul class="site-navigation">
@@ -44,6 +48,7 @@
 
       <section class="product-description">
         <h2 class="visually-hidden">Описание товаров</h2>
+
         <ul class="main-slider-controls">
           <li><input type="radio" id="selfie-slide" name="toggle-main-slide" checked></li>
           <li><input type="radio" id="bracelet-slide" name="toggle-main-slide"></li>
@@ -81,7 +86,7 @@
             </p>
             <b>48 часов</b>
             <p>Без подзарядки</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button" href="#" aria-label="Узнать больше о фитнес-браслете">Подробнее</a>
           </li>
           <li class="main-slider main-slider-quadrupter">
             <img src="../img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
@@ -104,8 +109,9 @@
         </ul>
       </section>
 
-      <section class="category">
+      <section class="category"> 
         <h2 class="visually-hidden">Категории товаров</h2>
+
           <ul class="category-list">
             <li class="category-item">
               <a href="#">
@@ -148,6 +154,7 @@
 
       <section class="services">
         <h2 class="visually-hidden">Информация об услугах</h2>
+
         <input type="radio" id="services-slider-1" name="toggle-service-slider" checked>
         <input type="radio" id="services-slider-2" name="toggle-service-slider">
         <input type="radio" id="services-slider-3" name="toggle-service-slider">
@@ -180,6 +187,7 @@
 
       <section class="partners">
         <h2 class="visually-hidden">Наши партнеры</h2>
+
         <ul class="partners-list">
           <li><a href="#"><img src="dji.svg" width="1" height="1" alt="Логотип компании «DJI»"></a></li>
           <li><a href="#"><img src="spgadgets.svg" width="1" height="1" alt="Логотип компании «SPGadjets»"></a></li>
@@ -190,14 +198,15 @@
 
       <section class="store-info">
         <h2>Информация о магазине</h2>
+
         <div class="about-us">
           <h3>О нас</h3>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="transport-company-list">
-            <li class="transport-company-item"><p><b>Деловые линии</b></p></li>
-            <li class="transport-company-item"><p><b>Автотрейдинг</b></p></li>
-            <li class="transport-company-item"><p><b>ЖелДорЭкспедиция</b></p></li>
+            <li class="transport-company-item"><b>Деловые линии</b></li>
+            <li class="transport-company-item"><b>Автотрейдинг</b></li>
+            <li class="transport-company-item"><b>ЖелДорЭкспедиция</b></li>
           </ul>
           <a class="button" href="#">Подробнее</a>
         </div>
@@ -205,18 +214,21 @@
         <div class="contacts">
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-           <img src="../img/map.png" width="560" height="222" alt="ул.Строителей, 15">
+           <img src="../img/map.png" width="560" height="222" alt="г.Москва, ул.Строителей, 15">
           <a class="button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
-      <a href="#"><img src="device-logo.svg" width="1" height="1" alt="Логотип интернет-магазина «Device»"></a>
+      <a href="#"><img src="device-logo.svg" width="164" height="36" alt="Логотип интернет-магазина «Device»"></a>
       <ul class="footer-user-navigation">
-        <li class="login-link"><a href="#">Войти</a></li>
-        <li class="comparison-goods"><a href="#">Сравнить</a></li>
-        <li class="cart"><a href="#">Корзина</a></li>
+        <li class="login-link">
+          <a href="#">Войти</a></li>
+        <li class="comparison-goods">
+          <a href="#">Сравнить</a></li>
+        <li class="cart">
+          <a href="#">Корзина</a></li>
       </ul>
       <p class="footer-address">г. Москва, ул. Строителей, 15</p>
       <ul class="footer-services">
@@ -226,20 +238,40 @@
       </ul>
       <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
       <ul class="footer-social">
-        <li><a href="#">FB</a></li>
-        <li><a href="#">Istagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Facebook"></a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Instagram"></a></li>
+        <li><a href="#" aria-label="Подписывайтесь на наш Twitter"></a></li>
       </ul>
     </footer>
     
     <section class="modal modal-write-us">
-      <!--Форма "Напишите нам"-->
-      <span class="modal-close">x</span>
+      <h2 class="visually-hidden">Напишите нам</h2>
+
+      <form method="POST" action="/echo" class="write-us">
+        <ul class="write-us-list">
+          <li class="write-us-item">
+            <label for="name"><b>Ваше имя:</b></label>
+            <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">   
+          </li>
+          <li class="write-us-item">
+            <label for="email"><b>Ваш e-mail:</b></label>
+            <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+          </li>
+          <li class="write-us-item">
+            <label for="text"><b>Текст письма:</b></label>
+            <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
+        <button type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
-      <!--Карта-->
-      <span class="modal-close">x</span>
+      <h2 class="visually-hidden">Мы находимся здесь</h2>
+
+      <img src="../img/map.png" width="560" height="222" alt="Офис магазина находится по адресу: г.Москва, ул.Строителей, 15">
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
