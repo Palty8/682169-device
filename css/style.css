@@ -1,0 +1,376 @@
+
+@font-face {
+  font-family: 'gilroyextrabold';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroylight';
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans';
+  src: url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensanslight';
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: #464646;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  background-color: #f7e296;
+}
+
+.main-navigation {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #000;
+}
+
+.user-navigation,
+.site-navigation,
+.catalog {
+  list-style: none;
+}
+
+.user-navigation a,
+.site-navigation a,
+.catalog a {
+  color: #000;
+}
+
+.catalog a {
+  line-height: 36px; 
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus,
+.catalog a:hover,
+.catalog a:focus,
+.logo-device:hover,
+.logo-device:focus {
+  opacity: 0.6;
+}
+
+.user-navigation a:active,
+.site-navigation a:active,
+.catalog a:active,
+.logo-device:active
+{
+  opacity: 0.3;
+}
+
+.main-slider-controls,
+.goods-list {
+  list-style: none;
+}
+
+.slogan b {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 800;
+  color: #000;
+}
+
+.table th {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.table td {
+  font-family: "gilroylight", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  color: #000;
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-item h3 {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;     
+}
+
+.services {
+  background-color: #e5e5e5;
+}
+
+.services-slider-controls,
+.services-description {
+  list-style: none;
+}
+
+.services-description h3,
+.store-info h3,
+.container h1 {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000;
+}
+
+.transport-company-item {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000;
+}
+
+.main-footer {
+  background-color: #464646;
+}
+
+.footer-user-navigation,
+.footer-services,
+.footer-social {
+  list-style: none;
+}
+
+.logo-footer {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ffc600;
+}
+
+.footer-middle p {
+  color: #fff;
+}
+
+.footer-user-navigation a {
+  line-height: 36px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.footer-user-navigation a:hover {
+  opacity: 1;
+}
+
+.footer-user-navigation a:active {
+  opacity: 0.3;
+}
+
+.footer-services a {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #fff;
+}
+
+.html-icon {
+  color: #ffc600;
+}
+
+.logo-footer:hover,
+.logo-footer:focus,
+.footer-services a:hover,
+.footer-services a:focus,
+.html-icon:hover,
+.html-icon:focus {
+  opacity: 0.6;
+}
+
+.logo-footer:active,
+.footer-services a:active,
+.html-icon:active {
+  opacity: 0.3;
+}
+
+.button {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #000;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ffc600;
+  background-size: 100px 200px;
+  border: none;
+}
+
+.button b:active {
+  opacity: 0.3;
+}
+
+.button-service:active {
+  background-color: #000;
+  color: #f7e184;
+}
+
+/* ----------------catalog.html ------------------------------ */
+
+.logout-link a {
+  opacity: 0.3;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item a,
+.breadcrumbs-item-current {
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.3;
+  color: #000;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  opacity: 1;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+.filters h3, 
+.sorting h3 {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #000;
+}      
+
+.sorting-list,
+.sorting-arrows {
+  list-style: none;
+
+}
+
+.sorting-item a{
+  font-family: "opensans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #000;
+  opacity: 0.3;
+}
+
+.sorting-item a:hover,
+.sorting-item a:focus {
+  opacity: 0.6;
+}
+
+.sorting-item a:active {
+  opacity: 1;
+}
+
+.selfie-sticks-list {
+  list-style: none;
+}
+
+.filter-fieldset legend,
+.selfie-sticks-item h3 {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;
+}
+
+.selfie-sticks-price {
+  font-family: "gilroylight", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300; 
+}
+
+.add-to-comparsion {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #000;
+  opacity: 0.5;
+}
+
+.add-to-comparsion:hover,
+.add-to-comparsion:focus {
+  opacity:1;
+}
+
+.add-to-comparsion:active {
+  opacity: 0.2;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a,
+.pagination-item-current {
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  opacity: 0.3;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  opacity: 0.6;
+}
+
+.pagination-item a:active {
+  opacity: 1;
+}
+
+.pagination-item-current {
+  opacity: 1;
+}
