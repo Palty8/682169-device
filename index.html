@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">   
   </head>
@@ -26,12 +27,12 @@
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог товаров</a>
             <ul class="catalog">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Квадракоптеры</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="catalog.html">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Фитнес-браслеты</a></li>
+              <li><a href="catalog.html">Квадракоптеры</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="catalog.html">Умные часы</a></li>
+              <li><a href="catalog.html">Экшн-камеры</a></li>
             </ul>
           </li>
           <li><a href="#">Доставка</a></li>
@@ -71,7 +72,7 @@
                 <td>Карбон</td>
               </tr>
             </table>
-            <a class="button" href="#"><b>Подробнее</b></a>
+            <a class="button" href="#">Подробнее</a>
           </li>
           <li class="main-slider main-slider-bracelet">
             <img src="img/slider-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
@@ -79,9 +80,15 @@
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
               не пропускать занятия и соблюдать диету.
             </p>
-            <p><b>48 часов</b></p>
-            <p>Без подзарядки</p>
-            <a class="button" href="#"><b>Подробнее</b></a>
+            <table class="table bracelet-table">
+              <tr>
+                <th>Без подзарядки</th>
+              </tr>
+              <tr>
+                <td>48 часов</td>
+              </tr>
+            </table>
+            <a class="button" href="#">Подробнее</a>
           </li>
           <li class="main-slider main-slider-quadrupter">
             <img src="img/slider-quadrupter.png" width="526" height="334" alt="Квадрокоптер">
@@ -99,7 +106,7 @@
                 <td>50 м</td>
               </tr>
             </table>
-            <a class="button" href="#"><b>Подробнее</b></a>
+            <a class="button" href="#">Подробнее</a>
           </li>
         </ol>
       </section>
@@ -197,14 +204,14 @@
             <li class="transport-company-item"><b>Автотрейдинг</b></li>
             <li class="transport-company-item"><b>ЖелДорЭкспедиция</b></li>
           </ul>
-          <a class="button" href="#"><b>Подробнее</b></a>
+          <a class="button" href="#">Подробнее</a>
         </div>
 
         <div class="contacts">
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
            <img src="img/map.png" width="560" height="222" alt="г.Москва, ул.Строителей, 15">
-          <a class="button" href="#"><b>Напишите нам</b></a>
+          <a class="button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -239,7 +246,7 @@
           <li><a href="#" class="social-twitter" aria-label="Подписывайтесь на наш Twitter"></a></li>
         </ul>
         <p class="copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="html-icon">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="html-icon" aria-label="HTML Academy"></a>
         </p>
       </div>
     </footer>
@@ -250,19 +257,19 @@
       <form method="POST" action="/echo" class="write-us">
         <ul class="write-us-list">
           <li class="write-us-item">
-            <label for="name"><b>Ваше имя:</b></label>
+            <label for="name">Ваше имя:</label>
             <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">   
           </li>
           <li class="write-us-item">
-            <label for="email"><b>Ваш e-mail:</b></label>
+            <label for="email">Ваш e-mail:</label>
             <input type="text" name="email" id="email" placeholder="Для отправки ответа">
           </li>
           <li class="write-us-item">
-            <label for="text"><b>Текст письма:</b></label>
+            <label for="text">Текст письма:</label>
             <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="button">Отправить</button>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
