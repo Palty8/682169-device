@@ -9,8 +9,10 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <img src="img/logo.svg" width="164" height="36" class="logo-device" alt="Логотип интернет-магазина «Device»">
+    <div class="container">
+      <header class="main-header">
+        <img src="img/logo.svg" width="164" height="36" class="logo-device" alt="Логотип интернет-магазина «Device»">
+        <div class="navigation-wrapper">
         <ul class="user-navigation">
           <li class="search-form">
             <form method="GET" action="/echo">
@@ -25,7 +27,7 @@
         </ul>
         <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог товаров</a>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог товаров</a>
             <ul class="catalog">
               <li><a href="catalog.html">Виртуальная реальность</a></li>
               <li><a href="catalog.html">Фитнес-браслеты</a></li>
@@ -35,11 +37,13 @@
               <li><a href="catalog.html">Экшн-камеры</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="site-navigation-item"><a href="#">Доставка</a></li>
+          <li class="site-navigation-item"><a href="#">Гарантия</a></li>
+          <li class="site-navigation-item"><a href="#">Контакты</a></li>
         </ul>
-      </nav> 
+        </nav> 
+      </div>
+    </div>
     </header>
 
     <main class="container">
@@ -53,61 +57,69 @@
           <li class="slide-radio"><button type="button" class="slide-button">Второй слайд</button></li>
           <li class="slide-radio"><button type="button" class="slide-button">Третий слайд</button></li>
         </ul>
+
+      
         <ol class="goods-list">
           <li class="main-slider main-slider-selfie">
             <img src="img/slider-selfie.png" width="384" height="486" alt="Палка для селфи">
-            <p class="slogan"><b>Делай селфи, как Бен Стиллер</b></p>
-            <p>Самая длинная палка для селфи доступна в нашем магазине.
-              Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-            </p>
-            <table class="table selfie-stick-table">
-              <tr>
-                <th>Длина палки</th>
-                <th>Вес палки</th>
-                <th>Материал</th>
-              </tr>
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-            </table>
-            <a class="button" href="#">Подробнее</a>
+            <div class="goods-decription">
+              <p class="slogan"><b>Делай селфи, как Бен Стиллер</b></p>
+              <p>Самая длинная палка для селфи доступна в нашем магазине.
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              </p>
+              <table class="table selfie-stick-table">
+                <tr>
+                  <th>Длина палки</th>
+                  <th>Вес палки</th>
+                  <th>Материал</th>
+                </tr>
+                <tr>
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+              </table>
+              <a class="button" href="#">Подробнее</a>
+            </div>
           </li>
           <li class="main-slider main-slider-bracelet">
             <img src="img/slider-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
-            <p class="slogan"><b>Худеем правильно!</b></p>
-            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
-              не пропускать занятия и соблюдать диету.
-            </p>
-            <table class="table bracelet-table">
-              <tr>
-                <th>Без подзарядки</th>
-              </tr>
-              <tr>
-                <td>48 часов</td>
-              </tr>
-            </table>
-            <a class="button" href="#">Подробнее</a>
+            <div class="goods-decription">
+              <p class="slogan"><b>Худеем правильно!</b></p>
+              <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
+                не пропускать занятия и соблюдать диету.
+              </p>
+              <table class="table bracelet-table">
+                <tr>
+                  <th>Без подзарядки</th>
+                </tr>
+                <tr>
+                  <td>48 часов</td>
+                </tr>
+              </table>
+              <a class="button" href="#">Подробнее</a>
+            </div>
           </li>
           <li class="main-slider main-slider-quadrupter">
             <img src="img/slider-quadrupter.png" width="526" height="334" alt="Квадрокоптер">
-            <p class="slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
-              мощным лазером, замаскированным под стандартную камеру.                
-            </p> 
-            <table class="table quadrupter-table">
-              <tr>
-                <th>Дальность полета</th>
-                <th>Радиус поражения</th>
-              </tr>
-              <tr>
-                <td>800 м</td>
-                <td>50 м</td>
-              </tr>
-            </table>
-            <a class="button" href="#">Подробнее</a>
-          </li>
+            <div class="goods-decription">
+              <p class="slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
+              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
+                мощным лазером, замаскированным под стандартную камеру.                
+              </p> 
+              <table class="table quadrupter-table">
+                <tr>
+                  <th>Дальность полета</th>
+                  <th>Радиус поражения</th>
+                </tr>
+                <tr>
+                  <td>800 м</td>
+                  <td>50 м</td>
+                </tr>
+              </table>
+              <a class="button" href="#">Подробнее</a>
+            </li>
+         </div>
         </ol>
       </section>
 
@@ -193,7 +205,7 @@
       </section>
 
       <section class="store-info">
-        <h2>Информация о магазине</h2>
+        <h2 class="visually-hidden">Информация о магазине</h2>
 
         <div class="about-us">
           <h3>О нас</h3>
@@ -211,12 +223,13 @@
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
            <img src="img/map.png" width="560" height="222" alt="г.Москва, ул.Строителей, 15">
-          <a class="button" href="#">Напишите нам</a>
+          <a class="button store-info-button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
+      <div class="container">
       <div class="footer-top">
         <p class="logo-footer">Device</p>
         <ul class="footer-user-navigation">
@@ -241,14 +254,15 @@
 
       <div class="footer-bottom">
         <ul class="footer-social">
-          <li><a href="#" class="social-facebook" aria-label="Подписывайтесь на наш Facebook"></a></li>
-          <li><a href="#" class="social-instagram" aria-label="Подписывайтесь на наш Instagram"></a></li>
-          <li><a href="#" class="social-twitter" aria-label="Подписывайтесь на наш Twitter"></a></li>
+          <li><a href="#" class="social-facebook" aria-label="Подписывайтесь на наш Facebook">facebook</a></li>
+          <li><a href="#" class="social-instagram" aria-label="Подписывайтесь на наш Instagram">instagramm</a></li>
+          <li><a href="#" class="social-twitter" aria-label="Подписывайтесь на наш Twitter">twitter</a></li>
         </ul>
         <p class="copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="html-icon" aria-label="HTML Academy"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="html-icon" aria-label="HTML Academy">html academy</a>
         </p>
       </div>
+    </div>
     </footer>
     
     <section class="modal modal-write-us">
