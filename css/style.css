@@ -32,12 +32,27 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+ input[type="checkbox"].visually-hidden,
+ input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-header {
@@ -46,14 +61,33 @@ a {
 
 .user-navigation {
   list-style: none;
+
+}
+
+.search-form form {
+  display: flex;
 }
        
 .search-form input[type="search"] {
   font: inherit;
   background-color: #f7e296;
   opacity: 0.3;
-
+  margin-left: 35px;
   border: none;
+}
+
+.user-navigation::before {
+  content: "";
+  
+  position: absolute;
+  top: 59px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .search-form input[type="search"]:hover {
@@ -61,25 +95,118 @@ a {
 }
 
 .search-form input[type="search"]:focus {
+  outline: none;
+  color: #000;
   opacity: 1;
 }
 
+input[type="search"]:focus ~ button {
+  color: #000;
+  border: 2px solid #000;
+  background-color: #f7e296;
+}
+
+input[type="search"]:focus ~ button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .search-form button {
+  display: block;
+
+  margin-left: auto;  
+  padding: 12px 20px;
   color: #000;
   background-color: #f7e296;
 
-  border: none;
+  border: 2px solid transparent;
 }
 
-.search-form button:hover,
 .search-form button:focus {
-  color: #fff;
-  background-color: #000;
+  outline: none;
 }
 
 .search-form button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #000;
+}
+
+
+
+.user-navigation a,
+.site-navigation a {
+  display: block;
+}
+
+.login-link {
+  position: relative;
+
+  padding-left: 30px;
+}
+
+.login-link::before{
+  content: "";
+  
+  position: absolute;
+  left: 0;
+  top: 9px;
+  
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.login-link:active::before {
+  opacity: 0.3;
+}
+
+.comparison-goods {
+  position: relative;
+}
+
+.comparison-goods::before {
+  content: "";
+  
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.comparison-goods:active::before {
+  opacity: 0.3;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart::before {
+  content: "";
+  
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.cart:active::before {
+  opacity: 0.3;
 }
 
 .user-navigation a {
@@ -174,6 +301,8 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   color: #000;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .button:hover {
@@ -375,7 +504,7 @@ a {
   opacity: 0.1;
 }
 
-.filters h3 {
+.filter-container h3 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -385,7 +514,7 @@ a {
   color: #000;
 }  
 
-.filters fieldset {
+.filter-fieldset {
   border: none;
 }
 
@@ -399,6 +528,10 @@ a {
 
 .filter-fieldset ul {
   list-style: none;
+}
+
+.color-catalog-container {
+  background-color: #ff0000;
 }
 
 .color-option label {
@@ -416,16 +549,6 @@ a {
 .filters button {
   background-color: #fff;
   border: none;
-}
-
-.sorting h3 {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000;
 }
 
 .sorting-list {
@@ -459,7 +582,7 @@ a {
   list-style: none;
 }
 
-.selfie-sticks-item h3 {
+.selfie-stick-info-line h3 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -538,11 +661,10 @@ a {
 
 html, body {
   min-width: 1200px;
- 
 }
 
 .container {
-  width: 1140px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 20px; 
 }
@@ -568,8 +690,9 @@ html, body {
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
-  width: 1040px;
   margin: 45px 0 0;
   padding: 0;
 }
@@ -578,31 +701,29 @@ html, body {
   width: 440px;
 }
 
-.search-form button {
-  display: none;
-}
-
 .login-link {
-  width: 260px;
+  width: 230px;
   margin-left: 100px;
 }
 
 .comparison-goods {
-  width:100px;
+  width: 70px;
   margin-left: 25px;
+  padding-left: 30px;
 }
 
 .cart {
-  width: 100px;
+  width: 70px;
   margin-left: auto;
+  padding-left: 30px;
 
   text-align: right;
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
 
-  width: 1040px;
   margin: 45px 0 0;
   padding: 0;
 }
@@ -627,6 +748,7 @@ html, body {
 
 .catalog {
   display: none;
+
   margin: 0;
   padding: 0;
 }
@@ -639,8 +761,9 @@ html, body {
 .main-slider {
   position: relative;
   display: flex; 
-  width: 1080px;
+ 
   margin: 0 auto;
+  
 }
 
 .main-slider-controls button{
@@ -668,7 +791,7 @@ html, body {
 }
 
 .description-column .button {
-  display: inline-block;
+  display: block;
   margin-top: 50px;
   padding: 0;
 }
@@ -702,7 +825,7 @@ html, body {
 .category-list {
   display:flex;
   justify-content: space-between;
-  width: 100%;
+  
   margin: 115px 0 0;
   padding: 0;
 }
@@ -712,7 +835,6 @@ html, body {
 }
 
 .services {
-  width: 100%;
   margin-top: 190px;
 
   background-color: #e5e5e5;
@@ -720,33 +842,33 @@ html, body {
 
 .services-container {
   display: flex;
+  flex-wrap: wrap;
  
-  width: 1160px;
   min-height: 290px;
-  margin: 0 auto;
 }
 
 .services-slider-controls {
   position: relative;
-  top: -55px;
+  top: -15px;
+
   width: 300px;
   margin: 0;
   padding: 0;
 }
 
-.services-description {
-  width: 500px;
-  margin: 0;
-  margin-left: 100px;
-  padding: 0;
+.services-slider-item {
+  margin-bottom: 15px;  
 }
 
-.button-service {
-  display: inline-block;
+.services-slider-item label {
+  cursor: pointer;
+}
 
-  width: 160px;
-  text-align: center;
-  margin-top: 45px;
+.services-description {
+  width: 600px;
+  margin: 0;
+  
+  padding-left: 100px;
 }
 
 .services-description h3 {
@@ -766,9 +888,10 @@ html, body {
 
 .brand-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 100%;
+
   margin: 100px 0 0;
   padding: 0;
 
@@ -777,9 +900,11 @@ html, body {
 
 .store-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   margin-top: 100px;
+  margin-bottom: 70px;
 }
 
 .about-us {
@@ -827,50 +952,53 @@ html, body {
 
   width: 260px;
   margin-top: 80px;
-  
-  text-align: center;
 }
 
 .main-footer {
-  margin-top: 95px;
+  
   padding-top: 65px;
 }
 
 .footer-top {
   display: flex;
+  flex-wrap: wrap;
  
   vertical-align: middle;
 }
 
 .logo-footer {
   width: 200px;
-  margin: 0;
+  margin: 0; 
   padding: 0;
 }
 
 .footer-user-navigation {
   display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
+  margin-left: auto;
   padding: 0;
 }
 
-.footer-user-navigation .login-link {
-  width: 240px;
-  margin-left: 460px;
+.footer-login-link {
+  width: 210px;
 }
 
-.footer-user-navigation .comparison-goods {
+.footer-comparison-goods {
   width: 100px;
   margin-left: 70px;
 }
 
-.footer-user-navigation .cart {
+.footer-cart {
   width: 80px;
   margin-left: auto;
 }
 
 .footer-middle {
   display: flex;
+  flex-wrap: wrap;
+
   margin-top: 45px;
 }
 
@@ -881,12 +1009,15 @@ html, body {
 
 .footer-services {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   width: 430px;
   margin: 0;
   margin-left: 165px;
   padding: 0;
+
+  text-transform: uppercase;
 }
 
 .footer-middle .footer-phone {
@@ -896,6 +1027,8 @@ html, body {
 
 .footer-bottom {
   display: flex;
+  flex-wrap: wrap;
+
   margin: 65px 0 0;
   padding: 0;
 }
@@ -911,6 +1044,8 @@ html, body {
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 }
@@ -931,14 +1066,17 @@ html, body {
 
 .form-container {
   display: flex;
+  flex-wrap: wrap;
+
   width: 760px;
   margin: 100px auto 0;
 }
 
 .write-us-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+ 
   margin: 0;
   padding: 0;
 }
@@ -1015,18 +1153,16 @@ html, body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   width: 385px;
   margin: 0;
   margin-top: 35px;
   margin-bottom: 50px;
   padding: 0;
   padding-left: 60px;
-}
-
-.filter-form {
-  width: 280px;
 }
 
 .color-list {
@@ -1039,9 +1175,46 @@ html, body {
   padding: 0;
 }
 
-.filters {
+.filter-container {
+  display: flex;
+  align-items: center;
+ 
+  
+}
+
+.color-filter-container {
+  background-image: linear-gradient(to right, #dcdcdc 50%, #ebebeb 50%)
+}
+
+.header-filter-container {
+  width: 270px;
+  padding-left: 60px;
+  background-color: #dcdcdc;
+}
+
+.catalog-columns {
+  display: flex;
+  
+}
+
+.color-catalog-container {
+  background-image: linear-gradient(to right,#ebebeb 50%, #fff 50%);
+}
+
+.filter-form {
+  width: 250px;
+  padding-top: 70px;
   padding-left: 60px;
 }
+
+.goods-info-column {
+  width: 770px;
+  padding-left: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #fff;
+}
+
 
 .filter-fieldset {
   padding: 0;
@@ -1054,21 +1227,23 @@ html, body {
 
 .sorting-list {
   margin: 0;
-  
   padding: 0;
 }
 
-.catalog-columns {
+.sorting {
   display: flex;
-}
-
-.sorting{
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+
+  width: 835px;
+  padding-left: 70px;
+ 
+  background-color: #ebebeb;
 }
 
 .sorting-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .selfie-sticks-list{
@@ -1089,6 +1264,7 @@ html, body {
 
 .selfie-stick-info-line {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
@@ -1124,8 +1300,7 @@ html, body {
 
 .pagination-list {
   display: flex;
-  align-items: center;
-  
+  flex-wrap: wrap;
 
   width: 700px;
   margin: 0;
@@ -1136,19 +1311,25 @@ html, body {
 }
 
 .pagination-item {
+  display: flex;
+  flex-wrap: wrap;
+
   margin-left: 30px;
 }
 
 .pagination-item-previous {
   margin-right: auto;
+  margin-left: 0;
 }
 
 .pagination-item-next {
   margin-left: auto;
 }
 
-.pagination-item-current {
-  margin-left: 0;
+.pagination-item-current a,
+.pagination-item-current a:hover{
+  color: #000;
+  opacity: 1;
 }
 
 .footer-username {
