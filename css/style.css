@@ -505,8 +505,9 @@ input[type="search"]:focus ~ .search-form-button:hover {
 
 .slider-button {
   width: 225px;
-  margin-top: 30px;
-  padding: 20px 40px;
+  margin-top: 40px;
+  padding: 10px 30px;
+  text-align: center;
 }
 
 .slider-button::after {
@@ -550,7 +551,7 @@ input[type="search"]:focus ~ .search-form-button:hover {
 
   position: absolute;
   top: 215px;
-  right: 80px;
+  right: 85px;
 
   width: 80px;
   margin: 0;
@@ -625,7 +626,7 @@ input[type="search"]:focus ~ .search-form-button:hover {
   font-weight: 300;
   letter-spacing: 0.01em;
   color: #464646;
-  margin-top: 35px;
+  margin-top: 45px;
 } 
 
 .table th {
@@ -843,7 +844,7 @@ input[type="search"]:focus ~ .search-form-button:hover {
   content: "";
 
   position: absolute;
-  top: 28px;
+  top: 20px;
   left: 0;
 
   width: 220px;
@@ -1110,13 +1111,14 @@ input[type="search"]:focus ~ .search-form-button:hover {
   width: 265px;
   margin-top: 65px;
   padding: 10px 20px;
+
 }
 
 .store-info-button::before {
   content: "";
   
   position: absolute;
-  top: 17px;
+  top: 18px;
   left: 0;
   
   width: 260px;
@@ -1376,24 +1378,32 @@ input[type="search"]:focus ~ .search-form-button:hover {
   position: fixed;
 
   background-color: #fff;
-
-  visibility: hidden;
 }
 
 .modal-map {
-  bottom: 40px;
+  display: none;
+
+  top: 50%;
   left: 50%;
+
+  margin-top: -350px;
   margin-left: -480px;
  
   background-color: transparent;
 }
 
 .modal-write-us{
+  display: none;
+
   top: 50%;
   left: 50%;
 
+  margin-top: -350px;
   margin-left: -480px;
-  margin-top: -200px;
+}
+
+.modal-show {
+  display: block;
 }
 
 .write-us {
@@ -2173,11 +2183,19 @@ input[type="search"]:focus ~ .search-form-button:hover {
 }
 
 .add-to-cart {
+  position: relative;
+  top: 15px;
+
   width: 210px;
-  padding: 15px 40px;
+  padding: 10px 20px;
+  
+  text-align: center;
 }
 
 .add-to-comparsion {
+  position: relative;
+  top: 22px;
+
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
